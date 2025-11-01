@@ -89,7 +89,7 @@ PACKAGES_TO_PROCESS = [
 
 ### `SPECIAL_HANDLING_DIRS`
 
-This is a critical "Do Not Touch" list. Some parts of a library are too fragile for our aggressive `__init__.py` rewrite. This configuration tells the build script to use a gentler approach (shimming submodules instead of the `__init__.py`) for these specific directories.
+This is a critical "Do Not Touch" list. Some parts of a library are too fragile for our aggressive `__init__.py` rewrite. This configuration tells the build script to skip these specific directories.
 
 ```python
 # --- Directories requiring gentle handling (__init__.py is untouched) ---
@@ -103,7 +103,7 @@ SPECIAL_HANDLING_DIRS = {
 }
 ```
 
-If you encounter errors after minification, adding the problematic directory to this list is the first step in debugging.
+If you encounter errors, adding the problematic directory to this list is the first step in debugging.
 
 
 ## Disclaimer
